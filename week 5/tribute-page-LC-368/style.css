@@ -8,17 +8,20 @@
             font-family: 'Inter';
             background-color: #F5B7B1; 
             display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            min-height: 100vh;
-            padding-top: 20px;
-        }
+            body {
+                font-family: 'Inter';
+                background-color: #F5B7B1;
+                /* use normal block flow so the top of the page starts at the top */
+                display: block;
+                padding-top: 20px;
+            }
 
-        .header {
-            font-family: "Playfair Display";
-            background: white;
-            padding: 30px;
-            text-align: center; 
+            /* center the main wrapper and limit its width for readability */
+            body > div {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 20px;
+            }
             margin-bottom: 20px; 
         }
 
@@ -50,21 +53,21 @@
 }
 figcaption {
     font-family: 'Inter';
-    background: #F5B7B1;
-    color: #fff;
+    background: transparent;
+    color: #2C3E50; /* darker text so caption is readable */
     margin-bottom: 10px;
-    font-size: 32px;
-    align-self: flex-center; 
-    width: 1169px;      
-    margin-left: 18px; 
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
 }
+
         .photo-section img {
-            width: 1169px;
-            height: 877px;
-            margin-top: 46px;
-            margin-left: 146px;
-            margin-right: 125px;
-            margin-bottom: 10px;
+            /* responsive image: scale down on small screens */
+            width: 100%;
+            max-width: 1169px;
+            height: auto;
+            display: block;
+            margin: 46px auto 10px; /* center horizontally */
         }
 
 
