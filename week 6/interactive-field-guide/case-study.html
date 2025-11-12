@@ -18,7 +18,7 @@
     <a href="index.html" class="back-link">← Back to Guide</a>
 
     <section id="design-decisions">
-      <h2>Design Decisions: What design choices did you make and why?</h2>
+      <h2>Design Decisions: What design choices<br> did you make and why?</h2>
       
       <p>
         I chose a dark, gaming-aesthetic design with orange and blue accents to match Rocket League's visual identity. The semi-transparent overlays (rgba(52, 52, 52, 0.8)) over the background image create depth while maintaining readability of the text content. Layering allows the background to exist without taking to much away from the viewer by using semi-transparent overlays between the background image and the text.
@@ -34,7 +34,7 @@
     </section>
 
     <section id="technical-challenges">
-      <h2>Technical Challenges: What was difficult to code? How did you solve it?</h2>
+      <h2>Technical Challenges:<br> What was difficult to code? How did you solve it?</h2>
       
       <p>
         Z-index layering was tricky when implementing the background overlays. The ::before pseudo-elements I used for semi-transparent backgrounds initially hid the text content completely. I solved this by using <strong>isolation: isolate</strong> on the parent section containers and setting z-index: -1 on the overlay pseudo-elements. This created stacking contexts where the overlay sits behind the content but in front of the background image.
@@ -46,7 +46,7 @@
     </section>
 
     <section id="responsive-strategy">
-      <h2>Responsive Strategy: How did you adapt your design for mobile?</h2>
+      <h2>Responsive Strategy:<br> How did you adapt your design for mobile?</h2>
       
       <p>
         I used a responsive approach with a @media (max-width: 700px) breakpoint to transform the layout. The flex container switches from flex-direction: row to column, stacking the sidebar above content. However, simply stacking wasn't enough—mobile users need screen space for content. I transformed the sidebar into an off-canvas navigation using <strong>position: fixed</strong> with <strong>transform: translateX(-100%)</strong>, which slides the menu in from the left when the hamburger icon is clicked.
@@ -62,7 +62,7 @@ I simplified spacing throughout the mobile version by reducing padding and margi
     </section>
 
     <section id="learning-moments">
-      <h2>Learning Moments: What did you learn about Flexbox or CSS positioning?</h2>
+      <h2>Learning Moments:<br> What did you learn about Flexbox or CSS positioning?</h2>
       
       <p>
         Flexbox context matters more than I initially realized. Using <strong>flex: 0 0 300px</strong> on the sidebar prevents it from growing or shrinking, maintaining a consistent 300px width regardless of content. I learned that changing flex-direction to column on mobile completely changes how flex children behave—suddenly my carefully crafted spacing needed adjustment. This taught me to think about flexbox as a directional system that fundamentally changes based on its axis.
