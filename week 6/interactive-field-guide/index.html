@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Case Study - Rocket League Guide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Hidden checkbox for menu toggle -->
+<input type="checkbox" id="sidebar-toggle" class="sidebar-toggle"><main class="container">
+    <nav class="sidebar">
+       <img src="https://snipboard.io/6e8GMv.jpg" alt="rl logo" style="width: 75%; border-radius: 8px; margin-top: 1.5rem; margin-left:1.8rem;">
+      <ul>
+        <li><a href="#section1">The Arena and Basic Physics</a></li>
+        <li><a href="#section2">Core Mechanics and Controls</a></li>
+        <li><a href="#section3">Mechanics and Ball Control</a></li>
+        <li><a href="#section4">Positioning & Rotation</a></li>
+        <li><a href="#section5">Mechanical Progression</a></li>
+      </ul>
+      <label for="sidebar-toggle" class="close-btn">×</label>
+    </nav>
+<!-- Mobile header (hidden on desktop) -->
+<div class="mobile-header">
+  <label for="sidebar-toggle" class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+  <h1>Rocket League: A Beginners Guide</h1>
+</div>
+
+  
+    <div class="content">
+       <header>
+    <h1>Rocket League</h1>
+    <h2> A Beginners Guide</h2>
+  </header>
+      <section id="section1">
+        <div class="wrapper">
+        <h2>Understanding the <br>Arena and Basic Physics</h2>
+    
+        <p>
+  Welcome to the Rocket League arena, where gravity-defying cars meet competitive soccer! The standard arena measures exactly 91.25 x 73 x 36.5 Rocket League Units (roughly equivalent to a professional soccer field scaled for rocket-powered vehicles). Every surface in the arena has unique properties: the floor provides maximum traction, while the curved walls allow for aerial plays and wall shots. The ceiling exists as an invisible barrier at the height limit, though skilled players barely notice it during competitive play.
+</p>
+
+<p>
+  The game operates on a sophisticated physics engine where every interaction follows consistent rules. Your car's hitbox—the invisible collision box around your vehicle—determines how you'll strike the ball. Understanding the supersonic state is crucial: when you reach 83% of maximum speed (2300 uu/s), your car begins trailing orange/blue sparks and can demolish opponents on contact. Boost management becomes your lifeline, with small pads restoring 12 boost and large corner pads providing full 100 boost restoration.
+</p>
+        <h3>Key Arena Elements:</h3>
+<ul>
+  <li><strong>6 Boost Pads (Large):</strong> Corner positions, 100% boost, 10-second respawn</li>
+  <li><strong>28 Boost Pads (Small):</strong> Scattered throughout, 12% boost, 4-second respawn</li>
+  <li><strong>2 Goals:</strong> 8 x 2.5 RLU opening with explosive visual feedback</li>
+  <li><strong>Kickoff Positions:</strong> 5 designated spawn points symmetrically arranged</li>
+  <li><strong>Demo Zones:</strong> Entire field when supersonic speed achieved</li>
+</ul>
+        </div>
+        <pre><code>ARENA_WIDTH = 91.25 RLU
+ARENA_HEIGHT = 36.5 RLU
+SUPERSONIC_SPEED = 2300 uu/s
+BOOST_TRIGGER = 83% max_speed</code></pre>
+      </section>
+
+      <section id="section2">
+        <div class="wrapper">
+        <h2>Mastering Core<br> Mechanics and Controls</h2>
+        <p>
+  Our journey begins with mastering the fundamental controls that separate casual players from competitive champions. The basic movement system includes throttle, reverse, powerslide, and jump—but the real magic happens when you combine them. Double-jumping by pressing jump twice quickly gives you height and forward momentum, while the single jump followed by a directional tilt creates the foundation for aerial control. The powerslide mechanic (typically bound to L1/LB) allows you to maintain momentum while changing direction quickly, essential for recoveries and sharp turns.
+</p>
+
+<p>
+  Boost management separates good players from great ones. You start each match with 33 boost and must constantly decide between collecting more boost or maintaining field position. The boost button provides acceleration beyond normal throttle, reaching maximum speed in approximately 2.5 seconds of continuous use. Learning to "feather" your boost—tapping it in short bursts rather than holding continuously—extends your aerial time and improves precision. Advanced players develop "boost paths" that optimize collection while rotating through defensive and offensive positions.
+</p>
+        <h3>Essential Control Combinations:</h3>
+<ul>
+  <li><strong>Fast Aerial:</strong> Jump + lean back + boost + jump (while holding boost)</li>
+  <li><strong>Half-flip:</strong> Backflip + cancel + air roll (180-degree quick recovery)</li>
+  <li><strong>Wave Dash:</strong> Jump off surface + flip into ground (momentum conservation)</li>
+  <li><strong>Speed Flip:</strong> Diagonal flip + cancel + air roll (fastest kickoff technique)</li>
+  <li><strong>Powerslide Cut:</strong> Powerslide + opposite turn (sharp angle changes)</li>
+</ul>
+        </div>
+        <pre><code>// Fast Aerial Sequence
+1. JUMP
+2. TILT_BACK + BOOST
+3. JUMP (within 1.25s)
+4. ADJUST + BOOST</code></pre>
+          
+      </section>
+
+      <section id="section3">
+        <div class="wrapper">
+        <h2>Aerial Mechanics<br>and Ball Control</h2>
+        
+        <p>
+  Aerial play transforms Rocket League from a ground-based game into a three-dimensional chess match played at supersonic speeds. Your car can freely rotate along three axes using pitch (forward/backward tilt), yaw (left/right rotation), and roll (barrel roll rotation). Mastering these inputs simultaneously while boosting toward a ball 20 feet in the air requires hundreds of hours of practice, but the fundamental principle remains simple: point your car where you want to go and boost.
+</p>
+
+<p>
+  The aerial fast aerial technique maximizes your launch speed and height. Instead of the basic double-jump, you execute: jump + immediately tilt back + boost + second jump within 1.25 seconds. This launches you approximately 25% faster than a standard aerial. Once airborne, making micro-adjustments becomes critical—your air roll buttons (L1/LB + left stick or dedicated air roll left/right) allow for fine-tuned positioning. Understanding ball physics helps prediction: the ball travels at varying speeds (maximum 6000 uu/s after explosive hits) and bounces follow consistent angles off surfaces.
+</p>
+        <h3>Key Aerial Concepts:</h3>
+<ul>
+  <li><strong>Takeoff Angle:</strong> 45-60 degrees optimal for most aerials</li>
+  <li><strong>Boost Efficiency:</strong> ~30 boost minimum for basic aerial</li>
+  <li><strong>Ball Cam Toggle:</strong> (Triangle/Y) for spatial awareness switching</li>
+  <li><strong>Recovery Height:</strong> Always land on wheels using air roll corrections</li>
+  <li><strong>Aerial Car Control:</strong> 6 degrees of freedom (3 rotation + 3 translation axes)</li>
+</ul>
+        </div>
+        <pre><code>takeoff_angle = 45-60°
+boost_required = 30 minimum
+ball_max_speed = 6000 uu/s
+recovery: LAND_ON_WHEELS = true</code></pre>
+      </section>
+
+      <section id="section4">
+        <div class="wrapper">
+        <h2>Positioning, Rotation, <br>and Team Strategy</h2>
+        <p>
+  Competitive Rocket League revolves around the concept of rotation—a fluid system where players cycle through offensive, midfield, and defensive positions. The basic 3v3 rotation follows a "triangle" pattern: the first player challenges the ball or takes a shot, the second player positions for a follow-up or pass, and the third player maintains defensive coverage. This isn't rigid positioning but rather a dynamic flow that responds to ball position and opponent pressure. Understanding "last man back" responsibility is crucial—the defensive player maintains shadow defense positioning between the ball and goal until a teammate rotates behind them.
+</p>
+
+<p>
+  Positioning zones divide the field into thirds: defensive third (your goal area), midfield (center), and offensive third (opponent's goal area). Your boost usage and commitment level should match your position—aggressive challenges in the offensive third, patient defense in your own third. The far post rotation principle prevents double-commits: when defending, rotate to the far post (opposite the ball side) rather than cutting in front of teammates. Boost starvation becomes an advanced strategy: denying opponent boost pads while maintaining your own supply creates scoring opportunities.
+</p>
+        <h3>Rotation Fundamentals:</h3>
+<ul>
+  <li><strong>Never ball chase:</strong> If teammate is closer, rotate behind them</li>
+  <li><strong>Communicate boost levels:</strong> Call "I'm out" or "I'm up" to coordinate</li>
+  <li><strong>Cut rotation short:</strong> Return to defense if teammate is ahead</li>
+  <li><strong>Maintain spacing:</strong> Stay ~20-30 RLU from teammates when possible</li>
+  <li><strong>Trust last man:</strong> Don't panic-rotate back if teammate has coverage</li>
+</ul>
+        </div>
+        <pre><code>if (teammate_closer) {
+  rotate_behind();
+} else if (boost < 30) {
+  collect_pads();
+} else {
+  challenge_ball();
+}</code></pre>
+      </section>
+
+      <section id="section5">
+        <div class="wrapper">
+        <h2>Advanced Techniques and Mechanical Progression</h2>
+        <p>
+  As you progress beyond fundamentals, mechanical skill becomes your competitive edge. The flip cancel technique (flipping then immediately pulling the opposite direction to cancel momentum) enables advanced maneuvers like the half-flip for instant 180-degree recoveries. Wall-to-air dribbles require reading wall bounces and timing your jump to carry the ball from wall to air to goal. The ceiling shot—jumping from the ceiling to preserve your flip indefinitely—creates unpredictable angles that demolish goalkeepers.
+</p>
+
+<p>
+  Dribbling mastery separates champion-level players from lower ranks. Ground dribbling involves balancing the ball on your car's hood at ~45-55 KPH, making subtle steering adjustments to maintain control. The flick mechanic (dodging while the ball sits on your car) generates explosive power: front flips create power shots, side flips make passing plays, and the musty flick (backflip while ball is overhead) produces one of the game's most stylish shots. Training packs accessed through the menu system provide isolated practice for each technique.
+</p>
+        <h3>Advanced Mechanical Checklist:</h3>
+<ul>
+  <li><strong>Aerial Car Control:</strong> air roll + directional air roll for tornado spins</li>
+  <li><strong>Wavedash:</strong> Landing flip timing (within 0.2s of ground contact)</li>
+  <li><strong>Flip Resets:</strong> Touching ball with all 4 wheels restores flip ability</li>
+  <li><strong>Ceiling Shuffle:</strong> Upside-down driving for ceiling shot setups</li>
+  <li><strong>Double Taps:</strong> Aerial shots that bounce off backboard into goal</li>
+</ul>
+
+<h3>Training Progression Path:</h3>
+<ul>
+  <li><strong>Free Play:</strong> 10 minutes daily for car control warmup</li>
+  <li><strong>Custom Training:</strong> Shot consistency and specific technique practice</li>
+  <li><strong>Workshop Maps:</strong> Ring maps for aerial control (PC only)</li>
+  <li><strong>1v1 Matches:</strong> Mechanical skill under pressure</li>
+  <li><strong>Replay Analysis:</strong> Study positioning and decision-making mistakes</li>
+</ul>
+        </div>
+        <pre><code>// Half-Flip Command
+INPUT: BACKFLIP
+CANCEL: PULL_FORWARD
+AIR_ROLL: 180_ROTATION
+RESULT: instant_recovery()</code></pre>
+      </section>
+       
+    </div>
+  </main>
+
+  <footer>
+    <p> © 2025 Landon Coddington | Interactive Field Guide</p>
+    <a href="https://landoncoddington.github.io/DESN368-code-design-workspace-f25/"> Portfolio</a>
+        <a href="placeholer.url"> case study</a>
+  </footer>
+</body>
