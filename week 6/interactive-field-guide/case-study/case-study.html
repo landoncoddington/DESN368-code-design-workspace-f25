@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Case Study - Rocket League Guide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="case-study.css">
+</head>
+<body>
+   <header>
+    <h1>Rocket League: A Beginners Guide</h1>
+    <h2> Case Study</h2>
+  </header>
+
+  <div class="content">
+    <a href="index.html" class="back-link">← Back to Guide</a>
+
+    <section id="design-decisions">
+      <h2>Design Decisions: What design choices did you make and why?</h2>
+      
+      <p>
+        I chose a dark, gaming-aesthetic design with orange and blue accents to match Rocket League's visual identity. The semi-transparent overlays (rgba(52, 52, 52, 0.8)) over the background image create depth while maintaining readability of the text content. Layering allows the background to exist without taking to much away from the viewer by using semi-transparent overlays between the background image and the text.
+      </p>
+
+      <p>
+        The typography strategy balances readability with Rocket League. I used <strong>Libre Baskerville</strong> for headers to provide an elegant, authoritative feel that makes the guide feel credible and well-researched. For body text, <strong>League Spartan</strong> offers modern readability that's clean at small sizes while also giving a touch of Rocket League feel. The sticky sidebar navigation keeps users oriented while scrolling through lots of content, ensuring they never lose their place in the guide.
+      </p>
+
+      <p>
+        Custom bullet points using Rocket League ball icons reinforce the theme throughout and make lists more engaging than standard bullets. Code blocks with syntax-style formatting (Courier New font with blue text on dark backgrounds) help technical readers quickly identify game mechanics and commands, making the guide functional as a reference document players can return to repeatedly.
+      </p>
+    </section>
+
+    <section id="technical-challenges">
+      <h2>Technical Challenges: What was difficult to code? How did you solve it?</h2>
+      
+      <p>
+        Z-index layering was tricky when implementing the background overlays. The ::before pseudo-elements I used for semi-transparent backgrounds initially hid the text content completely. I solved this by using <strong>isolation: isolate</strong> on the parent section containers and setting z-index: -1 on the overlay pseudo-elements. This created stacking contexts where the overlay sits behind the content but in front of the background image.
+      </p>
+
+      <p>
+        Sticky positioning on the sidebar didn't work initially, which was frustrating since the CSS looked correct. I discovered that sticky elements need explicit constraints to function properly. Adding <strong>height: 100vh</strong> and <strong>align-self: flex-start</strong> to the sidebar within the flex container finally made it stick properly. The height creates a scrollable boundary, while align-self prevents the flex container from stretching the sidebar and breaking the sticky behavior.
+      </p>
+    </section>
+
+    <section id="responsive-strategy">
+      <h2>Responsive Strategy: How did you adapt your design for mobile?</h2>
+      
+      <p>
+        I used a responsive approach with a @media (max-width: 700px) breakpoint to transform the layout. The flex container switches from flex-direction: row to column, stacking the sidebar above content. However, simply stacking wasn't enough—mobile users need screen space for content. I transformed the sidebar into an off-canvas navigation using <strong>position: fixed</strong> with <strong>transform: translateX(-100%)</strong>, which slides the menu in from the left when the hamburger icon is clicked.
+      </p>
+
+      <p>
+        The mobile header was essential for this transformation. On desktop it's completely hidden (display: none), but on mobile it becomes visible (display: flex) with a hamburger menu icon. This icon triggers the same checkbox that controls the sidebar visibility.
+      </p>
+
+      <p>
+I simplified spacing throughout the mobile version by reducing padding and margins to maximize content space on smaller screens. The checkbox state management (#sidebar-toggle:checked) controls the entire mobile menu through CSS, creating an elegant solution that's both lightweight and performant. This pure CSS approach reduces page weight and improves responsiveness across all devices.
+      </p>
+    </section>
+
+    <section id="learning-moments">
+      <h2>Learning Moments: What did you learn about Flexbox or CSS positioning?</h2>
+      
+      <p>
+        Flexbox context matters more than I initially realized. Using <strong>flex: 0 0 300px</strong> on the sidebar prevents it from growing or shrinking, maintaining a consistent 300px width regardless of content. I learned that changing flex-direction to column on mobile completely changes how flex children behave—suddenly my carefully crafted spacing needed adjustment. This taught me to think about flexbox as a directional system that fundamentally changes based on its axis.
+      </p>
+
+      <p>
+        Position: sticky is more finicky than I expected. It only works when the element has room to scroll within its container, which wasn't obvious at first. Adding <strong>height: 100vh</strong> created that scrollable boundary that sticky positioning requires. I also learned that <strong>isolation: isolate</strong> creates new stacking contexts, which is incredibly useful for preventing z-index conflicts between overlays and content. This property essentially creates a boundary where z-index values are contained within that element.
+      </p>
+
+      <p>
+        Pseudo-elements (::before and ::after) are far more powerful than I initially understood. Using them for overlays and custom bullets kept my HTML clean and semantic while adding significant visual complexity. They exist outside the normal document flow but can be positioned relative to their parents, allowing for layered effects.
+      </p>
+    </section>
+
+    <section id="future-improvements">
+      <h2>Future Improvements: What would you add or change with more time?</h2>
+
+<p>
+  Interactive content would transform this from a static guide into an active learning platform. Video demonstrations embedded in relevant sections would let players see techniques in motion rather than relying solely on text descriptions. An interactive arena map with labeled boost pad positions would give players a visual reference for memorizing crucial field locations. A practice timer and checkbox-based progress tracker would enable players to log training sessions and mark completed techniques, evolving the guide from a simple reference into a personalized training companion.
+</p>
+
+<p>
+  If I could redo anything, it would be the main header and sidebar menu—they're pretty plain right now. The hero section is just orange with text on it, which works but doesn't really capture how exciting Rocket League is. I'd add a cool background image, like a car doing an aerial shot or a goal explosion, with a dark overlay so you can still read the title clearly. Making the heading bigger would make it feel more professional. The sidebar navigation is functional but boring—just blue rectangles with text. Better hover effects, like the link glowing, would make it feel more interactive.
+</p>
+    </section>
+  </div>
+
+   <footer>
+    <p> © 2025 Landon Coddington | Interactive Field Guide</p>
+    <a href="https://landoncoddington.github.io/DESN368-code-design-workspace-f25/"> Portfolio</a>
+    <a href="index.html" class="back-link-2">Back to Guide</a>
+  </footer>
+</body>
