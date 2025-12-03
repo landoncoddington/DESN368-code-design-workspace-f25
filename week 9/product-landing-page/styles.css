@@ -151,13 +151,19 @@ nav img {
     border-radius: 10px;
     overflow: hidden;
     position: relative;
+    padding-bottom: 56.25%; 
+    height: 0;
 }
 
 .video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
     border-radius: 10px;
+    object-fit: contain; 
 }
 
         /* Features Section */
