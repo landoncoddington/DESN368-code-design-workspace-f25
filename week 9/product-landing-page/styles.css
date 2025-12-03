@@ -13,17 +13,17 @@
 
         /* Navigation */
         nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 20px 60px;
             background: #f5f5f0;
             border-bottom: 1px solid #eee;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
         }
 nav img {
       width: 32px;
