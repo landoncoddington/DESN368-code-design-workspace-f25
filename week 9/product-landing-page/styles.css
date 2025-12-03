@@ -163,7 +163,7 @@ nav img {
     height: 100%;
     display: block;
     border-radius: 10px;
-    object-fit: contain; 
+    object-fit: cover; 
 }
 
         /* Features Section */
@@ -537,6 +537,17 @@ footer p {
     .features,
     .products-grid {
         grid-template-columns: 1fr;
+    }
+        .trust-content {
+        padding-left: 0;
+        padding: 0 20px;
+        font-size: 12px;
+        gap: 10px;
+    }
+    
+    .trust-icon img {
+        width: 32px;
+        height: 32px;
     }
 
     .footer-content {
