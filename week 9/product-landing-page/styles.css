@@ -129,7 +129,7 @@ nav img {
 
         /* Video Section */
 .video-section {
-    background: #2b2b2b;
+    background: #2c2c2c;
     padding: 80px 60px;
     text-align: center;
 }
@@ -149,21 +149,12 @@ nav img {
     background: transparent;
     border-radius: 10px;
     overflow: hidden;
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 */
-    height: 0;
 }
 
 .video-container video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
+    width: 100%;
     height: auto;
-    object-fit: cover;
+    display: block;
     border-radius: 10px;
 }
         /* Features Section */
