@@ -11,7 +11,7 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav>
+    <nav id="header">
     <div class="logo">
        <img src="assets/adrift-wordmark.png" alt="ADRIFT Logo">
     </div>
@@ -23,11 +23,11 @@
         <span></span>
     </label>
     
-    <ul class="nav-links">
-        <li><a href="#home">HOME</a></li>
-        <li><a href="#collection">THE COLLECTION</a></li>
-        <li><a href="#about">WHY ADRIFT?</a></li>
-        <li><a href="#contact">CONTACT</a></li>
+    <ul id="nav-bar" class="nav-links">
+        <li><a href="#home" class="nav-links">HOME</a></li>
+        <li><a href="#collection" class="nav-links">THE COLLECTION</a></li>
+        <li><a href="#about" class="nav-links">WHY ADRIFT?</a></li>
+        <li><a href="#contact" class="nav-links">CONTACT</a></li>
     </ul>
     
     <div class="cart-icon"> 
@@ -50,7 +50,7 @@
     <section class="video-section">
         <h2>SEE THE JOURNEY</h2>
         <div class="video-container">
-    <video controls autoplay muted loop playsinline>
+    <video id="video" controls autoplay muted loop playsinline>
         <source src="assets/adrift-video.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -119,14 +119,14 @@
 
         <!-- Size Chart -->
         <div class="size-chart">
-            <table>
+            <table id="data-table">
                 <thead>
                     <tr>
-                        <th>Size</th>
-                        <th>Length</th>
-                        <th>Shoulder</th>
-                        <th>Chest</th>
-                        <th>Sleeve Length</th>
+                        <th scope="col">Size</th>
+                        <th scope="col">Length</th>
+                        <th scope="col">Shoulder</th>
+                        <th scope="col">Chest</th>
+                        <th scope="col">Sleeve Length</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -171,7 +171,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="contact" id="contact">
+    <section class="contact" id="contact-form">
         <h2>JOIN THE JOURNEY</h2>
       <p>Sign up for early access to new drops!</p>
         <form class="contact-form">
@@ -187,7 +187,7 @@
                 <label for="message">Message (Optional)</label>
                 <textarea id="message" placeholder="Tell us about yourself..."></textarea>
             </div>
-            <button type="submit" class="submit-button">SIGN UP</button>
+            <button id="submit" type="submit" class="submit-button">SIGN UP</button>
         </form>
     </section>
 
