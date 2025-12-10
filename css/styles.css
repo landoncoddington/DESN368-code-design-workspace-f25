@@ -249,14 +249,14 @@ a:active {
     }
 
     .project-card:nth-child(2) .project-img img {
-      object-position: center 10%;  /* Tribute */
+      object-position: right 10%;  /* Tribute */
     }
 
     .project-card:nth-child(3) .project-img img {
-      object-position: center 15%;  /* Field Guide */
+      object-position: right 15%;  /* Field Guide */
     }
     .project-card:nth-child(4) .project-img img {
-      object-position: center top;  /* Product Landing */
+      object-position: right 15%;  /* Product Landing */
    }
 
     .project-img::before {
