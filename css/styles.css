@@ -151,6 +151,8 @@ a:active {
       aspect-ratio: 3/4;
       border: 3px solid var(--pop);
       position: relative;
+      overflow: hidden;
+      line-height: 0;
     }
 
     .about-img img {
@@ -159,6 +161,7 @@ a:active {
       object-fit: cover;
       object-position: center center;
       filter: grayscale(20%);
+      display: block;
     }
 
     .about-content h2 {
