@@ -233,10 +233,31 @@ a:active {
     .project-img {
       width: 100%;
       height: 400px;
-      background: linear-gradient(135deg, var(--secondary), var(--accent));
       object-fit: cover;
       object-position: center top;
     }
+    .project-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+
+    .project-card:nth-child(1) .project-img img {
+      object-position: center 20%;  /* Recipe */
+    }
+
+    .project-card:nth-child(2) .project-img img {
+      object-position: center 10%;  /* Tribute */
+    }
+
+    .project-card:nth-child(3) .project-img img {
+      object-position: center 15%;  /* Field Guide */
+    }
+    .project-card:nth-child(4) .project-img img {
+      object-position: center top;  /* Product Landing */
+   }
 
     .project-img::before {
       content: 'VIEW PROJECT';
