@@ -233,7 +233,7 @@ a:active {
 
     .project-img {
       width: 100%;
-      height: 270px;
+      height: 350px;
       background: linear-gradient(135deg, var(--secondary), var(--accent));
       overflow: hidden;
       position: relative;
