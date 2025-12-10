@@ -236,7 +236,7 @@ a:active {
       height: 250px;
       background: linear-gradient(135deg, var(--secondary), var(--accent));
       overflow: hidden;
-      position: relative;
+      position: center;
     }
 
     .project-img::before {
