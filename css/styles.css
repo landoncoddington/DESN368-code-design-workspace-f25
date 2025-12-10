@@ -149,7 +149,6 @@ a:active {
     .about-img {
       width: 100%;
       aspect-ratio: 3/4;
-      background: linear-gradient(135deg, var(--accent) 0%, var(--secondary) 100%);
       border: 3px solid var(--pop);
       position: relative;
     }
@@ -158,7 +157,7 @@ a:active {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center center;
+      object-position: center 25%;
       filter: grayscale(20%);
     }
 
