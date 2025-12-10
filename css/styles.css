@@ -62,6 +62,21 @@
 
     nav a:hover {
       color: var(--accent);
+      a:link {
+  color: var(--text);
+}
+
+a:visited {
+  color: var(--text-muted);
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+a:active {
+  color: var(--pop);
+}
     }
 
     /* Hero Section */
