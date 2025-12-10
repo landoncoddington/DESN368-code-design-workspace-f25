@@ -208,7 +208,7 @@ a:active {
       letter-spacing: 4px;
       text-align: center;
       margin-bottom: 4rem;
-      color: var(--text);
+      color: var(--pop);
     }
 
     .projects-grid {
