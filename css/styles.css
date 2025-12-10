@@ -228,6 +228,8 @@ a:active {
       transform: translateY(-12px);
       box-shadow: 0 20px 60px rgba(166, 37, 38, 0.4);
       border-color: var(--accent);
+      display: flex;
+      flex-direction: column;
     }
 
     .project-img {
@@ -295,7 +297,7 @@ a:active {
       padding: 2rem;
       display: flex;
       flex-direction: column;
-      min-height: 250px; 
+      flex: 1; 
     }
 
     .project-info h3 {
